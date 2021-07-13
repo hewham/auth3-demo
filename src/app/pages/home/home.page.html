@@ -3,7 +3,8 @@
 
   <div id="container">
     <img class="a-icon" src="assets/icon/white.png" />
-    <p>Auth3</p>
+    <br>
+    <p><b>Auth3</b></p>
     <br>
     <strong>Sign In with Ethereum</strong>
     <br>
@@ -50,5 +51,9 @@
         <p>"sub": {{ web3Service.decodedJWT.sub }}</p>
       </div>
     </div>
+
+    <br>
+    <p tappable (click)="how()"><u><b>How does Auth3 work? <ion-icon name="arrow-forward"></ion-icon></b></u></p>
+
   </div>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { Web3Service } from '../../services/web3.service';
 
 @Component({
@@ -9,6 +10,7 @@ import { Web3Service } from '../../services/web3.service';
 export class HomePage implements OnInit {
 
   constructor(
+    private navCtrl: NavController,
     public web3Service: Web3Service
   ) {}
 
@@ -22,6 +24,10 @@ export class HomePage implements OnInit {
 
   async logout() {
     await this.web3Service.logout();
+  }
+
+  how() {
+    this.navCtrl.navigateForward("how");
   }
 
 }

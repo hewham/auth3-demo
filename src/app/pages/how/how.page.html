@@ -1,0 +1,45 @@
+<ion-content [fullscreen]="true">
+  <div class="background"></div>
+  <ion-button class="close-button" (click)="back()" fill="clear">
+    <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+
+  <div id="container">
+    <div class="width-container">
+      <img class="a-icon" src="assets/icon/white.png" />
+      <br>
+      <strong>How it works</strong>
+      <br>
+      <br>
+      <p><b>
+        <u>Auth3</u> is an open and trustless protocol for authorization via web3 wallets.
+      </b></p>
+      <br>
+      <br>
+      <strong>Server Authentication</strong>
+      <p>
+        Using private key message signing via web3 wallets, the signature verification is performed using a random nonce.
+      </p>
+      <br>
+      <div class="box">
+        <img style="border-radius: 8px;" src="assets/img/diagram1.png" />
+        <p>Diagram of private server authentication flow</p>
+      </div>
+
+      <br>
+      <br>
+      <strong>Decentralized Authentication</strong>
+      <p>
+        <i>[In Progress]</i> It is theoretically possible to save the nonce on-chain, and perform a signature verification with every request, challenged against the public nonce.
+      </p>
+      <br>
+      <p>
+        This would remove the need for an issuer or auth token. It would however take time and cost gas.
+      </p>
+      <br>
+      <p>
+        Signature verification can be performed either on a private server (web2) or within a Dapp (web3).
+      </p>
+    </div>
+  </div>
+</ion-content>
