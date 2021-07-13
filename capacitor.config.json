@@ -1,0 +1,13 @@
+{
+  "appId": "com.anonacy.anonacyapp",
+  "appName": "Anonacy",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 3000
+    }
+  },
+  "cordova": {}
+}

@@ -1,0 +1,54 @@
+<ion-content [fullscreen]="true">
+  <div class="background"></div>
+
+  <div id="container">
+    <img class="a-icon" src="assets/icon/white.png" />
+    <p>Auth3</p>
+    <br>
+    <strong>Sign In with Ethereum</strong>
+    <br>
+    <br>
+    <p>
+      This is a proof of concept showcasing an authentication 
+      <br>
+      system using ethereum wallet signed messages.
+    </p>
+    <br>
+    <div *ngIf="!web3Service.JWT">
+      <ion-button (click)="signin()" color="secondary">
+        Sign In with Wallet
+      </ion-button>
+      <br>
+      <br>
+      <img class="metamask-icon" src="https://cdn.iconscout.com/icon/free/png-512/metamask-2728406-2261817.png" />
+      <p>Requires MetaMask Browser Extension</p>
+    </div>
+
+    <div *ngIf="web3Service.JWT && !web3Service.decodedJWT.isExpired">
+      <div class="box">
+        <p>
+          <b>AUTHENTICATED WALLET</b>
+          <br>
+          {{ web3Service.decodedJWT.sub }}
+        </p>
+        <ion-button (click)="logout()" color="secondary">
+          Log Out
+        </ion-button>
+      </div>
+      <br>
+      <div class="box">
+        <p>
+          <b>AUTH TOKEN (JWT):</b>
+          <br>
+          {{ web3Service.JWT }}
+        </p>
+        <br>
+        <p><b>DECODED PAYLOAD:</b></p>
+        <p>"exp": {{ web3Service.decodedJWT.exp }}</p>
+        <p>"iat": {{ web3Service.decodedJWT.iat }}</p>
+        <p>"iss": {{ web3Service.decodedJWT.iss }}</p>
+        <p>"sub": {{ web3Service.decodedJWT.sub }}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

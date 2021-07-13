@@ -1,0 +1,8 @@
+{
+  "name": "auth3",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b01acfd6"
+}
