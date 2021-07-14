@@ -79,13 +79,12 @@ export class Web3Service {
   }
 
   async authenticate(address) {
-    console.log("creating new account for address: ", address);
+    // console.log("creating new account for address: ", address);
     try {
       let res: any = await this.fetchNonce(address);
       const nonce = res.nonce;
-      const prefix = res.prefix;
-      console.log("nonce: ", nonce);
-      const signature = await this.signMessage(address, nonce, prefix);
+      const msg = res.msg;
+      const signature = await this.signMessage(address, msg);
       let jwt: any = await this.verifySignature(address, signature);
       this.saveInfo(jwt);
     } catch (err) {
@@ -118,8 +117,7 @@ export class Web3Service {
   //   console.log("exp: ", exp);
   // }
 
-  signMessage(address, nonce, prefix) {
-    const msg = `${prefix}${nonce}`
+  signMessage(address, msg) {
     return new Promise((resolve, reject) =>
       this.web3.eth.personal.sign(
         msg,

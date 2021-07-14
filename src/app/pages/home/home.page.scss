@@ -1,18 +1,3 @@
-.background {
-  height: 100%;
-  width: 100%;
-  z-index: -10;
-  position: absolute;
-  top: 0;
-  left: 0;
-  // background-image: url("/assets/gradients/Mesh 34.jpg") !important;
-  // background-image: url("/assets/gradients/Mesh 48.jpg") !important;
-  background-image: url("/assets/gradients/Mesh 67.jpg") !important;
-  // background-image: url("/assets/gradients/Mesh 85.jpg") !important;
-  background-color: black;
-  background-size: cover;
-}
-
 #container {
   text-align: center;
   position: absolute;
@@ -55,4 +40,28 @@
 .metamask-icon {
   height: 32px;
   width: 32px;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  // background-image: url("/assets/gradients/Mesh 34.jpg") !important;
+  // background-image: url("/assets/gradients/Mesh 48.jpg") !important;
+  background-image: url("/assets/gradients/Mesh 67.jpg") !important;
+  // background-image: url("/assets/gradients/Mesh 85.jpg") !important;
+  background-color: black;
+  background-size: cover;
+}
+
+.version {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  font-family: monospace;
+  font-size: 0.8em;
+  color: white;
 }
